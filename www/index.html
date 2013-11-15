@@ -23,15 +23,18 @@
         <meta name="format-detection" content="telephone=no" />
         <meta name="viewport" content="user-scalable=no, initial-scale=1, maximum-scale=1, minimum-scale=1, width=device-width, height=device-height, target-densitydpi=device-dpi" />
         <link rel="stylesheet" type="text/css" href="css/index.css" />
+        <script src="https://backpack.openbadges.org/issuer.js"></script>
+        <script>
+        function giveBadge(){
+            OpenBadges.issue(['http://badges.bit.bc.ca/mwa/mwa-pjrch01.json'], function(errors, successes){ /*todo*/ });
+        }
+        </script>
         <title>Hello World</title>
     </head>
     <body>
         <div class="app">
-            <h1>PhoneGap</h1>
-            <div id="deviceready" class="blink">
-                <p class="event listening">Connecting to Device</p>
-                <p class="event received">Device is Ready</p>
-            </div>
+            <h1>Klick the Button</h1>
+            <input type="button" id="mainButton" title="click me" onclick="giveBadge()" value="click me" />
         </div>
         <script type="text/javascript" src="phonegap.js"></script>
         <script type="text/javascript" src="js/index.js"></script>
